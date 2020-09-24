@@ -13,7 +13,7 @@ public class Main {
     geinstantieerd te worden.
 
     b) Pas de code zo aan dat dit werkt: Util.destroyRocket(spaceXRocket);
-    // Dit is een statische methode. Hier kun je meer over lezen op EdHub!
+    Dit is een statische methode. Hier kun je meer over lezen op EdHub!
 
     c) Maak een abstracte methode `void land()` in Rocket.
 
