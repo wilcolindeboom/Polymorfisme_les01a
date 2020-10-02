@@ -1,6 +1,6 @@
 package nl.novi.javaprogrammeren.overerving.polymorfisme;
 
-public class Rocket {
+public abstract class Rocket {
 
     public int maximumFuel;
     public int currentFuel;
@@ -33,10 +33,20 @@ public class Rocket {
     }
 
     public boolean hasEnoughFuel(int fuel) {
-        if(fuel < currentFuel) {
+        if(fuel <= currentFuel) {
             return true;
         } return false;
     }
+
+    public abstract void land();
+
+    public boolean canDescend(int metersPerFuel) {
+        int metersToDescend = metersPerFuel * currentFuel;
+
+        return metersToDescend < height;
+    }
+
+
 
     @Override
     public String toString() {

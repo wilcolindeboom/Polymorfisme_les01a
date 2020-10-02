@@ -1,6 +1,7 @@
 package nl.novi.javaprogrammeren;
 
 import nl.novi.javaprogrammeren.overerving.polymorfisme.Rocket;
+import nl.novi.javaprogrammeren.overerving.polymorfisme.SoyuzRocket;
 import nl.novi.javaprogrammeren.overerving.polymorfisme.SpaceXRocket;
 import nl.novi.javaprogrammeren.overerving.util.Util;
 
@@ -30,16 +31,33 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        Rocket genericRocket = new Rocket(100);
 
-        genericRocket.fly(10);
-        System.out.println(genericRocket.toString());
-
-        SpaceXRocket spaceXRocket = new SpaceXRocket(100);
+        Rocket spaceXRocket = new SpaceXRocket(100);
         spaceXRocket.fly(10);
         System.out.println(spaceXRocket.toString());
+        spaceXRocket.land();
+        Util.destroyRocket(spaceXRocket);
+        System.out.println("--");
 
-        Util.destroyRocket(genericRocket);
+        Rocket unLandableRocket = new SpaceXRocket(250);
+        unLandableRocket.fly(250);
+        System.out.println(unLandableRocket.toString());
+        unLandableRocket.land();
+        Util.destroyRocket(unLandableRocket);
+        System.out.println("--");
+
+        Rocket russianCrasher = new SoyuzRocket(10);
+        russianCrasher.fly(10);
+        System.out.println(russianCrasher.toString());
+        russianCrasher.land();
+        Util.destroyRocket(russianCrasher);
+        System.out.println("--");
+
+        Rocket russianLander = new SoyuzRocket(100);
+        russianLander.fly(10);
+        System.out.println(russianLander.toString());
+        russianLander.land();
+        Util.destroyRocket(russianLander);
 
     }
 }

@@ -8,7 +8,7 @@ public class Util {
     private Util(){}
 
     public static void destroyRocket(Rocket rocket) {
-        System.out.println("The Rocket is destroyed. It had flown" + rocket.getHeight() + " meters.");
+        System.out.println("The Rocket is destroyed. It had flown " + rocket.getHeight() + " meters.");
     }
 
 }
