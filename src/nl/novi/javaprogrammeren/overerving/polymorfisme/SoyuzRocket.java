@@ -1,9 +1,11 @@
 package nl.novi.javaprogrammeren.overerving.polymorfisme;
 
-public class SpaceXRocket extends Rocket {
+public class SoyuzRocket extends Rocket {
 
 
-    public SpaceXRocket(int maximumFuel) {
+
+
+    public SoyuzRocket(int maximumFuel) {
         this.maximumFuel = maximumFuel;
         this.currentFuel = maximumFuel;
     }
@@ -42,7 +44,7 @@ public class SpaceXRocket extends Rocket {
 
     @Override
     public void land() {
-        if(height>currentFuel*50) {
+        if(height>currentFuel*40) {
             System.out.println("Rocket has crashed");
         }
         else {

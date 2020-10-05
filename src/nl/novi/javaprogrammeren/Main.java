@@ -1,7 +1,6 @@
 package nl.novi.javaprogrammeren;
 
-import nl.novi.javaprogrammeren.overerving.polymorfisme.Rocket;
-import nl.novi.javaprogrammeren.overerving.polymorfisme.SpaceXRocket;
+import nl.novi.javaprogrammeren.overerving.polymorfisme.*;
 import nl.novi.javaprogrammeren.overerving.util.Util;
 
 public class Main {
@@ -30,16 +29,22 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        Rocket genericRocket = new Rocket(100);
+     //   Rocket genericRocket = new Rocket(100);
 
-        genericRocket.fly(10);
-        System.out.println(genericRocket.toString());
+      //  Rocket.fly(10);
+      //  System.out.println(genericRocket.toString());
 
-        SpaceXRocket spaceXRocket = new SpaceXRocket(100);
-        spaceXRocket.fly(10);
-        System.out.println(spaceXRocket.toString());
+      //  Rocket spaceXRocket = new SpaceXRocket(100);
+      //  spaceXRocket.fly(80);
+     //   System.out.println(spaceXRocket.toString());
+      //  spaceXRocket.land();
 
-        Util.destroyRocket(genericRocket);
+        Rocket SoyuzRocket = new SoyuzRocket(100);
+        SoyuzRocket.fly(20);
+        System.out.println(SoyuzRocket.toString());
+        SoyuzRocket.land();
+
+       Util.destroyRocket(SoyuzRocket);
 
     }
 }

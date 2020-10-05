@@ -1,45 +1,22 @@
 package nl.novi.javaprogrammeren.overerving.polymorfisme;
 
-public class Rocket {
+public abstract class Rocket {
 
-    public int maximumFuel;
-    public int currentFuel;
-    public int height = 0;
+ int maximumFuel;
+ int currentFuel;
+ int height = 0;
 
-    public Rocket(int maximumFuel) {
-        this.maximumFuel = maximumFuel;
-        this.currentFuel = maximumFuel;
-    }
 
-    public void fly(int fuel) {
-        int metersFlown = 0;
-        if(hasEnoughFuel(fuel)) {
-            metersFlown = calculateMetersFlown(fuel);
-            decreaseFuel(fuel);
-        }
-        this.height = height + metersFlown;
-    }
+    public abstract void fly(int fuel) ;
 
-    public int getHeight() {
-        return height;
-    }
+    public abstract int getHeight() ;
 
-    public int calculateMetersFlown(int fuel) {
-        return fuel * 100;
-    }
+    public abstract int calculateMetersFlown(int fuel) ;
 
-    public void decreaseFuel(int fuel) {
-        currentFuel = currentFuel - fuel;
-    }
+    public abstract void decreaseFuel(int fuel) ;
 
-    public boolean hasEnoughFuel(int fuel) {
-        if(fuel < currentFuel) {
-            return true;
-        } return false;
-    }
+    public abstract boolean hasEnoughFuel(int fuel) ;
 
-    @Override
-    public String toString() {
-        return "The Rocket is flying at an altitude of " + this.height + " meters.";
-    }
+    public abstract void land() ;
+
 }
